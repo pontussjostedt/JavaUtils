@@ -20,7 +20,6 @@ public class Bound implements  Drawable {
 
     public void updateTransform(){
         path.transform(transform);
-        System.out.println(Math.atan2(transform.getShearY(), transform.getScaleY()));
     }
 
     private void initPath() {

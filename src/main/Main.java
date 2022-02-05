@@ -18,12 +18,14 @@ public class Main {
         var t0 = System.currentTimeMillis();
         var angle = 0D;
         while(true) {
-            angle += 0.1;
+            transform.rotate(angle);
+            bound.updateTransform();
+            angle += 0.0001;
             fps ++;
             a.render((g2d) -> {
                 bound.draw(g2d);
             });
-            bound.contains(new Point2D.Double(50, 50));
+            System.out.println(bound.contains(new Point2D.Double(50, 50)));
             if(System.currentTimeMillis() - t0 > 1000){
                 System.out.println("fps = " + fps);
                 fps = 0;
