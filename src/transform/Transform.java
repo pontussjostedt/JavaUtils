@@ -1,7 +1,6 @@
 package transform;
 
 import java.awt.geom.AffineTransform;
-
 public class Transform extends AffineTransform {
 
     public void setY(int y){
